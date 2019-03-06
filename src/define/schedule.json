@@ -1,0 +1,11 @@
+{
+    "cleanAccessTokens": {
+        "api_url": "/accesstoken/clean-expired",
+        "method": "post",
+        "hour": 10,
+        "minute": 43,
+        "second": 0,
+        "days": [1, 7],
+        "timeZone": "Asia/Ho_Chi_Minh"
+    }
+}

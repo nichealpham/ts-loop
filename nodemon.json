@@ -1,0 +1,8 @@
+{
+    "env": {"NODE_ENV": "dev"},
+    "watch": ["src", "defines", "public"],
+    "ext": "ts,js,json",
+    "verbose": false,
+    "ignore": ["src/**/*.spec.ts"],
+    "exec": "cd ./src && ../node_modules/.bin/ts-node server.ts"
+}

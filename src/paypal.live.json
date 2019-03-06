@@ -1,0 +1,12 @@
+{
+    "client_id": "",
+    "client_secret": "",
+    "mode": "live",
+    "console_url": "http://cassandra.ml",
+    "payment": {
+        "intent": "sale",
+        "payer": {
+            "payment_method": "paypal"
+        }
+    }
+}

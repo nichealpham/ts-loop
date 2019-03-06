@@ -1,0 +1,85 @@
+{
+    "name": "Paycheck",
+    "plural": "paycheck",
+    "base": "Model",
+    "strict": true,
+    "addBaseApis": false,
+    "options": {
+        "validateUpsert": true,
+        "strictObjectIDCoercion": true
+    },
+    "idInjection": true,
+    "replaceOnPUT": true,
+    "persistUndefinedAsNull": true,
+    "mixins": {
+        "SoftDelete": {
+            "deletedAt": "deleted",
+            "scrub": false,
+            "index": false
+        }
+    },
+    "properties": {
+        "_id": {
+            "type": "string",
+            "id": true,
+            "required": true,
+            "index": true,
+            "description": "ID",
+            "isArray": false,
+            "defaultFn": "guid"
+        },
+        "_userId": {
+            "type": "string",
+            "required": true
+        },
+        "_paypalId": {
+            "type": "string",
+            "required": true
+        },
+        "transactions": {
+            "type": "array",
+            "required": true
+        },
+        "payment": {
+            "type": "object",
+            "required": true
+        },
+        "status": {
+            "type": "string",
+            "required": true,
+            "default": "waiting-approval",
+            "in": "PaycheckStatus"
+        },
+        "created": {
+            "type": "Date",
+            "required": true,
+            "defaultFn": "now"
+        },
+        "deleted": {
+            "type": "Date",
+            "default": null
+        }
+    },
+    "hidden": [
+        "deleted"
+    ],
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {
+        "apiFind": {
+            "description": "Find user's paychecks ?filter={'where':{}}",
+            "accessType": "*",
+            "accepts": [ { "arg": "ctx", "type": "Object", "http": { "source": "context" } } ],
+            "returns": { "arg": "data", "type": "[Paycheck]", "root": false },
+            "http": { "verb": "get", "path": "/" }
+        },
+        "apiCreate": {
+            "description": "Create a paycheck for all payable transactions.",
+            "accessType": "*",
+            "accepts": [ { "arg": "ctx", "type": "Object", "http": { "source": "context" } } ],
+            "returns": { "arg": "data", "type": "Object", "root": false },
+            "http": { "verb": "post", "path": "/" }
+        }
+    }
+}

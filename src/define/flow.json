@@ -1,0 +1,13 @@
+{
+    "TransactionStatus": {
+        "payable": ["checkout"],
+        "checkout": ["paid", "payable"],
+        "paid": []
+    },
+    "PaycheckStatus": {
+        "waiting-approval": ["paid", "errored", "suspended"],
+        "paid": [],
+        "errored": ["waiting-approval", "suspended"],
+        "suspended": ["waiting-approval"]
+    }
+}

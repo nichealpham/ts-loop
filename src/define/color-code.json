@@ -1,0 +1,27 @@
+{
+    "Reset": "1b[0m",
+    "Bright": "1b[1m",
+    "Dim": "1b[2m",
+    "Underscore": "1b[4m",
+    "Blink": "1b[5m",
+    "Reverse": "1b[7m",
+    "Hidden": "1b[8m",
+
+    "Black": "1b[30m",
+    "Red": "1b[31m",
+    "Green": "1b[32m",
+    "Yellow": "1b[33m",
+    "Blue": "1b[34m",
+    "Magenta": "1b[35m",
+    "Cyan": "1b[36m",
+    "White": "1b[37m",
+
+    "BgBlack": "1b[40m",
+    "BgRed": "1b[41m",
+    "BgGreen": "1b[42m",
+    "BgYellow": "1b[43m",
+    "BgBlue": "1b[44m",
+    "BgMagenta": "1b[45m",
+    "BgCyan": "1b[46m",
+    "BgWhite": "1b[47m"
+}

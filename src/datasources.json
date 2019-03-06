@@ -1,0 +1,41 @@
+{
+    "db": {
+        "url": "mongodb://[USER_NAME]:[PASSWORD]@[HOST_NAME]:49311/[DB_NAME]",
+        "database": "data",
+        "name": "db",
+        "allowExtendedOperators": true,
+        "connector": "mongodb",
+        "useNewUrlParser": true,
+        "all": true
+    },
+    "db.secrete": {
+        "url": "mongodb://[USER_NAME]:[PASSWORD]@[HOST_NAME]:49311/[DB_NAME]",
+        "database": "data",
+        "name": "db.secrete",
+        "allowExtendedOperators": true,
+        "connector": "mongodb",
+        "useNewUrlParser": true,
+        "all": true
+    },
+    "cache": {
+        "name": "cache",
+        "localStorage": "yes",
+        "file": "",
+        "connector": "memory",
+        "all": true
+    },
+    "sendgrid": {
+        "name": "sendgrid",
+        "connector": "loopback-connector-sendgrid",
+        "api_key": "[API_KEY]",
+        "sender_email": "no.reply@cassandra.ai"
+    },
+    "memory": {
+        "name": "memory",
+        "localStorage": "yes",
+        "file": "",
+        "connector": "memory",
+        "all": true
+    }
+}
+  

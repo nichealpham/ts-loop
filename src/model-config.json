@@ -1,0 +1,61 @@
+{
+    "_meta": {
+        "sources": [
+            "loopback/common/models",
+            "loopback/server/models",
+            "./models/base",
+            "./models"
+        ],
+        "mixins": [
+            "loopback/common/mixins",
+            "loopback/server/mixins",
+            "../node_modules/loopback-softdelete-mixin4"
+        ]
+    },
+    "Core": {
+        "dataSource": null,
+        "public": true,
+        "strict": true
+    },
+    "System": {
+        "dataSource": null,
+        "public": false,
+        "strict": false
+    },
+    "Pricing": {
+        "dataSource": null,
+        "public": true,
+        "strict": true
+    },
+    "Wallet": {
+        "dataSource": "db.secrete",
+        "public": true,
+        "strict": true
+    },
+    "Cost": {
+        "dataSource": null,
+        "public": true,
+        "strict": true
+    },
+    "Transaction": {
+        "dataSource": "db",
+        "public": true,
+        "strict": true
+    },
+    "Paycheck": {
+        "dataSource": "db",
+        "public": true,
+        "strict": true
+    },
+    "Email": {
+        "dataSource": "sendgrid",
+        "public": false,
+        "strict": true
+    },
+    "Paypal": {
+        "dataSource": null,
+        "public": true,
+        "strict": true
+    }
+}
+  

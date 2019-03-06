@@ -1,0 +1,12 @@
+{
+    "client_id": "",
+    "client_secret": "",
+    "mode": "sandbox",
+    "console_url": "http://localhost:3000/billing/cost",
+    "payment": {
+        "intent": "sale",
+        "payer": {
+            "payment_method": "paypal"
+        }
+    }
+}

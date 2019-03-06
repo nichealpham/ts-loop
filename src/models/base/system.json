@@ -1,0 +1,31 @@
+{
+    "name": "System",
+    "plural": "system",
+    "base": "Model",
+    "strict": true,
+    "options": {
+        "validateUpsert": true,
+        "strictObjectIDCoercion": true
+    },
+    "idInjection": true,
+    "replaceOnPUT": true,
+    "persistUndefinedAsNull": true,
+    "mixins": {},
+    "properties": {},
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {
+        "getSchedules": {
+            "accepts": [],
+            "returns": { "arg": "data", "type": "Object", "root": true },
+            "http": { "verb": "get", "path": "/schedules" }
+        },
+        "getPaths": {
+            "accepts": [],
+            "returns": { "arg": "data", "type": "Object", "root": true },
+            "http": { "verb": "get", "path": "/paths" }
+        }
+    }
+}
+  

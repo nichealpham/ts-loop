@@ -1,0 +1,91 @@
+{
+    "name": "Wallet",
+    "plural": "wallet",
+    "base": "Model",
+    "strict": true,
+    "addBaseApis": false,
+    "options": {
+        "validateUpsert": true,
+        "strictObjectIDCoercion": true
+    },
+    "idInjection": true,
+    "replaceOnPUT": true,
+    "persistUndefinedAsNull": true,
+    "mixins": {
+        "SoftDelete": {
+            "deletedAt": "deleted",
+            "scrub": false,
+            "index": false
+        }
+    },
+    "properties": {
+        "_id": {
+            "type": "string",
+            "id": true,
+            "required": true,
+            "index": true,
+            "description": "ID",
+            "isArray": false,
+            "defaultFn": "guid"
+        },
+        "_userId": {
+            "type": "string",
+            "required": true
+        },
+        "secrete_id": {
+            "type": "string",
+            "required": true
+        },
+        "amount": {
+            "type": "number",
+            "required": true,
+            "default": 0
+        },
+        "status": {
+            "type": "string",
+            "required": true,
+            "default": "pending",
+            "in": "WalletStatus"
+        },
+        "created": {
+            "type": "Date",
+            "required": true,
+            "defaultFn": "now"
+        },
+        "deleted": {
+            "type": "Date",
+            "default": null
+        }
+    },
+    "hidden": [
+        "_id",
+        "secrete_id",
+        "deleted"
+    ],
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {
+        "apiGet": {
+            "description": "Get user's authenticated wallet.",
+            "accessType": "*",
+            "accepts": [ { "arg": "ctx", "type": "Object", "http": { "source": "context" } } ],
+            "returns": { "arg": "data", "type": "Wallet", "root": false },
+            "http": { "verb": "get", "path": "/" }
+        },
+        "apiCreate": {
+            "description": "Create a wallet with basic authentication.",
+            "accessType": "*",
+            "accepts": [ { "arg": "ctx", "type": "Object", "http": { "source": "context" } } ],
+            "returns": { "arg": "data", "type": "Wallet", "root": false },
+            "http": { "verb": "post", "path": "/" }
+        },
+        "apiActivate": {
+            "description": "Activate a wallet using a link attached in activation email.",
+            "accessType": "*",
+            "accepts": [ { "arg": "ctx", "type": "Object", "http": { "source": "context" } } ],
+            "returns": { "arg": "data", "type": "Object", "root": false },
+            "http": { "verb": "get", "path": "/activate" }
+        }
+    }
+}

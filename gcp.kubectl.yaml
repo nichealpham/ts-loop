@@ -1,0 +1,41 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: bravo-api-service
+spec:
+  selector:
+    app: bravo-api
+  ports:
+    - protocol: "TCP"
+      # Port inside cluster
+      port: 8080
+      # Target Nodejs port
+      targetPort: 4002
+      # Port forward outside (for traffic)
+      nodePort: 30001
+  type: LoadBalancer
+
+
+---
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: bravo-api-deployment
+  labels:
+    app: bravo-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bravo-api
+  template:
+    metadata:
+      labels:
+        app: bravo-api
+    spec:
+      containers:
+      - name: bravo-api-v1
+        image: gcr.io/bravodevelopmentnew/bravo-api-image
+        ports:
+        - containerPort: 4002

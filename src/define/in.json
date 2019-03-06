@@ -1,0 +1,18 @@
+{
+    "TransactionStatus": {
+        "payable": "payable",
+        "checkout": "checkout",
+        "paid": "paid"
+    },
+    "WalletStatus": {
+        "pending": "pending",
+        "activated": "activated",
+        "locked": "locked"
+    },
+    "PaycheckStatus": {
+        "waiting-approval": "waiting-approval",
+        "paid": "paid",
+        "errored": "errored",
+        "suspended": "suspended"
+    }
+}

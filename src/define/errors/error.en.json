@@ -1,0 +1,138 @@
+{
+    "UNAUTHENTICATED": {
+        "statusCode": 403,
+        "message": "No permission to perform this operation!"
+    },
+    "ACCESS_TOKEN_ID_MISSING": {
+        "statusCode": 426,
+        "message": "Access Token id is missing!"
+    },
+    "ACCESS_TOKEN_REQUIRED": {
+        "statusCode": 426,
+        "message": "Access Token id is missing!"
+    },
+    "ACCESS_TOKEN_NOT_EXIST": {
+        "statusCode": 404,
+        "message": "Access Token is not existed!"
+    },
+    "WALLET_NOT_EXISTED": {
+        "statusCode": 404,
+        "message": "Wallet is not existed!"
+    },
+    "API_NOT_EXIST": {
+        "statusCode": 404,
+        "message": "Api not existed!"
+    },
+    "ACCESS_TOKEN_NOT_VALID": {
+        "statusCode": 403,
+        "message": "Access Token data is not correct!"
+    },
+    "ACCESS_TOKEN_EXPIRED": {
+        "statusCode": 403,
+        "message": "Access Token has expired!"
+    },
+    "PROTECTED_FIELD_NOT_VALID": {
+        "statusCode": 403,
+        "message": "Work flow field is not correct!"
+    },
+    "ACCESS_TOKEN_CANNOT_DESTROY": {
+        "statusCode": 405,
+        "message": "Access Token data is not correct!"
+    },
+    "USER_ID_MISSING": {
+        "statusCode": 426,
+        "message": "User Id is missing!"
+    },
+    "USER_EMAIL_OR_PASSWORD_MISSING": {
+        "statusCode": 426,
+        "message": "User email or password is missing!"
+    },
+    "TO_EMAIL_MISSING": {
+        "statusCode": 426,
+        "message": "Email sender must specify receiver's email!"
+    },
+    "USER_EMAIL_NOT_VALID": {
+        "statusCode": 403,
+        "message": "User email is not correct!"
+    },
+    "USER_EMAIL_NOT_VERIFIED": {
+        "statusCode": 403,
+        "message": "User email is not verified!"
+    },
+    "USER_PASSWORD_NOT_VALID": {
+        "statusCode": 403,
+        "message": "User password is not correct!"
+    },
+    "USER_PASSWORD_TOO_LONG": {
+        "statusCode": 403,
+        "message": "User password is too long!"
+    },
+    "USER_UPDATE_FAILED": {
+        "statusCode": 403,
+        "message": "Update user data failed!"
+    },
+    "USER_NOT_VALID": {
+        "statusCode": 403,
+        "message": "User data is not correct!"
+    },
+    "USER_NOT_EXIST": {
+        "statusCode": 404,
+        "message": "User is not existed!"
+    },
+    "EMAIL_TEMPLATE_NOT_EXIST": {
+        "statusCode": 404,
+        "message": "Email template is not exist!"
+    },
+    "REALM_MISSING": {
+        "statusCode": 426,
+        "message": "Realm is missing!"
+    },
+    "REALM_NOT_EXIST": {
+        "statusCode": 404,
+        "message": "Realm is not existed!"
+    },
+    "REALM_NOT_VALID": {
+        "statusCode": 403,
+        "message": "Realm is not correct!"
+    },
+    "OPERATION_FAILED": {
+        "statusCode": 420,
+        "message": "Operation failed!"
+    },
+    "PAYPAL_SETUP_FAILED": {
+        "statusCode": 420,
+        "message": "Paypal setup failed!"
+    },
+    "PAYCHECK_NOT_EXISTED": {
+        "statusCode": 404,
+        "message": "Paycheck is not existed!"
+    },
+    "PAYCHECK_CANNOT_PAID": {
+        "statusCode": 420,
+        "message": "Paycheck cannot be paid due to expired or locked or had been paid already!"
+    },
+    "PAYCHECK_ALREADY_PAID": {
+        "statusCode": 404,
+        "message": "Paycheck  had already been paid!"
+    },
+    "WALLET_CREATE_FAILED": {
+        "statusCode": 420,
+        "message": "Cannot create wallet due to insufficient data or wallet already existed!"
+    },
+    "WALLET_NOT_ACTIVATED": {
+        "statusCode": 420,
+        "message": "Wallet is either locked or temporary unavailable! Please activate wallet first."
+    },
+    "WALLET_ALREADY_EXISTED": {
+        "statusCode": 420,
+        "message": "Cannot create new wallet! User's wallet already existed!"
+    },
+    "USER_REGISTER_FAILED": {
+        "statusCode": 420,
+        "message": "User register account failed!"
+    },
+    "SEND_EMAIL_FAILED": {
+        "statusCode": 420,
+        "message": "Send email failed!"
+    }
+}

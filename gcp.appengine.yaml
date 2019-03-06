@@ -1,0 +1,16 @@
+runtime: nodejs
+
+env: flex
+service: default
+threadsafe: true
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 2
+
+env_variables:
+  NODE_ENV: 'production'
+
+network:
+  forwarded_ports:
+    - 4002/tcp

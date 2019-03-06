@@ -1,0 +1,40 @@
+{
+    "name": "Core",
+    "plural": "core",
+    "base": "Model",
+    "strict": true,
+    "options": {
+        "validateUpsert": true,
+        "strictObjectIDCoercion": true
+    },
+    "idInjection": true,
+    "replaceOnPUT": true,
+    "persistUndefinedAsNull": true,
+    "mixins": {
+        "SoftDelete": {
+          "deletedAt": "deleted",
+          "scrub": false,
+          "index": false
+        }
+    },
+    "properties": {
+        "_id": {
+            "type": "string",
+            "id": true,
+            "required": true,
+            "index": true,
+            "description": "ID",
+            "isArray": false,
+            "defaultFn": "guid"
+        },
+        "deleted": {
+            "type": "Date",
+            "default": null
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}
+  

@@ -1,0 +1,40 @@
+{
+    "initial:before": {},
+    "initial": {
+        "compression": {},
+        "cors": {
+            "params": {
+                "origin": "*",
+                "credentials": true,
+                "maxAge": 86400
+            }
+        }
+    },
+    "session": {},
+    "auth": {},
+    "parse": {},
+    "routes": {
+        "./middleware/authenticator": {
+            "methods": ["GET", "PUT", "POST", "DELETE"],
+            "paths": [
+                "/payment/cost",
+                "/payment/transaction",
+                "/payment/wallet",
+                "/payment/paycheck"
+            ]
+        },
+        "loopback#rest": {
+            "paths": [
+                "${restApiRoot}"
+            ]
+        }
+    },
+    "files": {},
+    "final": {
+        "loopback#urlNotFound": {}
+    },
+    "final:after": {
+        "strong-error-handler": {}
+    }
+}
+  

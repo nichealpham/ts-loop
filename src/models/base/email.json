@@ -1,0 +1,10 @@
+{
+    "name": "Email",
+    "plural": "email",
+    "base": "Model",
+    "properties": {},
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}

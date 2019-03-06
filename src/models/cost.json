@@ -1,0 +1,25 @@
+{
+    "name": "Cost",
+    "plural": "cost",
+    "base": "Model",
+    "strict": true,
+    "options": {},
+    "addBaseApis": false,
+    "idInjection": true,
+    "replaceOnPUT": true,
+    "persistUndefinedAsNull": true,
+    "mixins": {},
+    "properties": {},
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {
+        "getServiceCost": {
+            "description": "Get user's latest service cost",
+            "accessType": "*",
+            "accepts": [ { "arg": "ctx", "type": "Object", "http": { "source": "context" } } ],
+            "returns": { "arg": "data", "type": "Object", "root": false },
+            "http": { "verb": "get", "path": "/" }
+        }
+    }
+}
