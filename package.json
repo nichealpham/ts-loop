@@ -43,7 +43,7 @@
 		"@types/request-promise": "^4.1.42",
 		"@types/rimraf": "^2.0.2",
 		"eslint": "^5.12.1",
-		"grunt": "^1.0.3",
+		"grunt": "^1.5.3",
 		"grunt-contrib-copy": "^1.0.0",
 		"nodemon": "^1.18.9",
 		"ts-node": "^6.2.0",
